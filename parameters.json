@@ -1,0 +1,8 @@
+{
+    "authority": "https://login.microsoftonline.com/common",
+    "client_id": "1728b0cc-18e9-42d6-b812-465c4e92669e",
+    "scope": [
+        "User.Read",
+        "Mail.Read"
+    ]
+}
