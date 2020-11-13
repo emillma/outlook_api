@@ -29,7 +29,7 @@ import msal
 def get_auth():
     with open('parameters.json', 'r') as file:
         config = json.load(file)
-    cache_file = '/private/my_cache.bin'
+    cache_file = os.path.join('private', 'my_cache.bin')
     cache = msal.SerializableTokenCache()
     if os.path.exists(cache_file):
         cache.deserialize(open(cache_file, "r").read())
