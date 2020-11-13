@@ -1,5 +1,5 @@
 """
-The code is taken from https://github.com/Azure-Samples/ms-identity-python-daemon
+The code is taken from https://github.com/Azure-Samples/ms-identity-python-devicecodeflow
 The configuration file would look like this:
 {
     "authority": "https://login.microsoftonline.com/common",
@@ -61,7 +61,7 @@ def get_auth():
         if "user_code" not in flow:
             raise ValueError(
                 "Fail to create device flow. Err: %s" % json.dumps(flow, indent=4))
-
+        print(flow["message"])
         result = app.acquire_token_by_device_flow(flow)
     return result['access_token']
 

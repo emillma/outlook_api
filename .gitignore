@@ -1,4 +1,5 @@
 
-private/
+private/*
+!private/.gitkeep
 
 __pycache__/
